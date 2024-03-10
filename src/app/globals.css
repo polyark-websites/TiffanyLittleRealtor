@@ -4,11 +4,11 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -25,6 +25,84 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.hero-bg 
+{
+  position: relative;
+  background-image: url('/hero_bg.png');
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  padding-top: 4rem; /* Adjust based on navbar height to make content visible */
+  z-index: 0;
+}
+
+.hero-bg::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Black with 20% opacity */
+  z-index: 1; /* Ensure it sits above the background image but below content */
+}
+
+.hero-text, .hero-bg > * {
+  position: relative;
+  z-index: 2;
+}
+
+.services-bg 
+{
+  position: relative;
+  background-image: url('/services_bg.webp');
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  height: auto;
+  padding-top: 4rem; /* Adjust based on navbar height to make content visible */
+  z-index: 0;
+}
+
+.services-bg::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Black with 20% opacity */
+  z-index: 1; /* Ensure it sits above the background image but below content */
+}
+
+.services-text, .services-bg > * {
+  position: relative;
+  z-index: 2;
+}
+
+.social-icon {
+  fill: white;
+}
+
+.fb-icon:hover {
+  fill: #4267B2;
+}
+
+.ig-icon:hover {
+  fill: url(#instagramGradient);
+}
+
+.linked-in-icon:hover {
+  fill: #0077B5;
+}
+
+.yt-icon:hover {
+  fill: #B2071D
+}
+
+.tiktok-icon:hover {
+  fill: #000
+}
+
 
 @layer utilities {
   .text-balance {
