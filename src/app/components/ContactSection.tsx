@@ -10,7 +10,7 @@ export type FormData = {
   message: string;
 };
 
-function ContactSection ({ dark = false } : { dark: boolean }) {
+function ContactSection () {
     const { register, handleSubmit } = useForm<FormData>();
     function onSubmit(data: FormData) {
         sendEmail(data);
