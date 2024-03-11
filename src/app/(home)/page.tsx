@@ -10,38 +10,40 @@ import Link from "next/link";
 
 function AboutSection() {
   return(
-    <div className='mx-auto h-full w-[80%] pt-10 pb-10 lg:w-[90vw] xl:w-[66%] 4k:pt-20'>
-      {/* Flex Col Text*/}
-        <div className="flex justify-center flex-wrap w-full lg:space-x-10 lg:flex-nowrap lg:items-center 4k:items-start">
-          {/* Text */}
-            <div className="text-primary-dark xl:flex xl:flex-col xl:space-y-4 4k:text-3xl">
-              {/* Title */}
-              <h2 className="uppercase font-bold text-xs pb-2 md:text-lg xl:text-2xl 4k:text-4xl">About me</h2>
-              <h3 className='text-2xl font-bold pb-4 md:text-3xl xl:text-4xl 4k:text-6xl'>Welcome to my world</h3>
-              {/* About Section   */}
-              <div className="text-sm text-justify md:text-lg xl:text-xl 4k:text-2xl">
-                <p className='pb-4'>I'm Tiffany Little! Hailing from the heart of Hampton Roads, Virginia, I grew up immersed in the local community. My academic journey fortified my passion for real estate, blending local insights with a solid educational foundation.</p>
-                <p className='pb-8 xl:pb-24'>Embarking on my real estate career, I quickly found my calling. With each client, I strive to transform the dream of homeownership into reality, leveraging my local expertise and dedicated service.</p>
+    <div className="bg-white">
+      <div className='mx-auto h-full w-[80%] pt-10 pb-10 lg:w-[90vw] xl:w-[66%] 4k:pt-20'>
+        {/* Flex Col Text*/}
+          <div className="flex justify-center flex-wrap w-full lg:space-x-10 lg:flex-nowrap lg:items-center 4k:items-start">
+            {/* Text */}
+              <div className="text-primary-dark xl:flex xl:flex-col xl:space-y-4 4k:text-3xl">
+                {/* Title */}
+                <h2 className="uppercase font-bold text-xs pb-2 md:text-lg xl:text-2xl 4k:text-4xl">About me</h2>
+                <h3 className='text-2xl font-bold pb-4 md:text-3xl xl:text-4xl 4k:text-6xl'>Welcome to my world</h3>
+                {/* About Section   */}
+                <div className="text-sm text-justify md:text-lg xl:text-xl 4k:text-2xl">
+                  <p className='pb-4'>I'm Tiffany Little! Hailing from the heart of Hampton Roads, Virginia, I grew up immersed in the local community. My academic journey fortified my passion for real estate, blending local insights with a solid educational foundation.</p>
+                  <p className='pb-8 xl:pb-24'>Embarking on my real estate career, I quickly found my calling. With each client, I strive to transform the dream of homeownership into reality, leveraging my local expertise and dedicated service.</p>
+                </div>
+                {/* Button visible on large and higher */}
+                <div className="hidden justify-center lg:flex lg:visible">
+                  <Link href="/about">
+                      <Button text="There's more" className="text-[.65rem] w-[75vw] px-4 py-3 mb-0 md:text-base lg:w-[33vw] xl:w-[22vw] 4k:text-3xl"  invert={false}/>
+                  </Link>
+                </div>
               </div>
-              {/* Button visible on large and higher */}
-              <div className="hidden justify-center lg:flex lg:visible">
-                <Link href="/about">
-                    <Button text="There's more" className="text-[.65rem] w-[75vw] px-4 py-3 mb-0 md:text-base lg:w-[33vw] xl:w-[22vw] 4k:text-3xl"  invert={false}/>
-                </Link>
-              </div>
-            </div>
-            {/* Image of Tiffany */}
-            <Image 
-            src={Tiffany}
-            alt="Tiffany Little"
-            className="drop-shadow-2xl mb-10 w-[90%] lg:w-[50%]"
-            />
-        </div>
-        {/* Button visible on med and smaller */}
-        <div className="flex justify-center lg:hidden">
-          <Link href="/about">
-              <Button text="There's more" className="text-[.65rem] w-[75vw] px-4 py-3 mb-0 md:text-base lg:w-[25%]"  invert={false}/>
-          </Link>
+              {/* Image of Tiffany */}
+              <Image 
+              src={Tiffany}
+              alt="Tiffany Little"
+              className="drop-shadow-2xl mb-10 w-[90%] lg:w-[50%]"
+              />
+          </div>
+          {/* Button visible on med and smaller */}
+          <div className="flex justify-center lg:hidden">
+            <Link href="/about">
+                <Button text="There's more" className="text-[.65rem] w-[75vw] px-4 py-3 mb-0 md:text-base lg:w-[25%]"  invert={false}/>
+            </Link>
+          </div>
         </div>
       </div>
   )
