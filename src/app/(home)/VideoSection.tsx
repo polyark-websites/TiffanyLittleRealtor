@@ -1,9 +1,9 @@
 'use client'
 
-import { MutableRefObject, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function VideoSection() {
-    const videoRef = useRef<MutableRefObject<any>>(null);
+    const videoRef = useRef<HTMLIFrameElement>(null);
 
     useEffect(() => {       
       const observer = new IntersectionObserver((entries) => {
